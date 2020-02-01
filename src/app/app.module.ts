@@ -11,6 +11,9 @@ import { SearchComponent } from './container/search/search.component';
 import { ResultComponent } from './container/result/result.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TokenInterceptor } from './token.interceptor'; // For spotify
+import { HTTP_INTERCEPTORS } from '@angular/common/http'; // For spotify
+
 
 @NgModule({
   declarations: [
@@ -33,7 +36,14 @@ import { HttpClientModule } from '@angular/common/http';
       }
     })
   ],
-  providers: [],
+  providers: [
+  // For spotify
+  // {
+  //     provide: HTTP_INTERCEPTORS,
+  //     useClass: TokenInterceptor,
+  //     multi: true
+  //   }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

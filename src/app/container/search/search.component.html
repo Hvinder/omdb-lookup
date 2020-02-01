@@ -11,4 +11,22 @@
   </div>
 </div>
 
+<div class="row text-center">
+	<div class="col-md-4 col-sm-12" *ngFor="let d of dataFromApi; let i = index">
+		<p class="">
+			<b>Name: </b>{{ d.title }}
+		</p>
+		<p>
+			<b>Year of release: </b>{{ d.year }}
+		</p>
+		<p>
+			<b>Type: </b>{{ d.type }}
+		</p>
+		<p>
+			<img src="{{d.poster}}" alt="">
+		</p>
+
+	</div>
+</div>
+
 <!-- {{ name.value }} -->

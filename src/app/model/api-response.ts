@@ -1,7 +1,6 @@
-export class ApiResponse {
-    id: number;
-    email: string;
-    first_name: string;
-    last_name: string;
-    avatar: string;
+export interface ApiResponse {
+    title: string;
+    year: string;
+    type: string;
+    poster: string;
 }

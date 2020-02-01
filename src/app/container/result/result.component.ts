@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-result',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
+	dataFromApi: any = [];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+  	this.dataFromApi = this.dataService.data;
   }
 
 }
