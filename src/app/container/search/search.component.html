@@ -4,10 +4,13 @@
 </div>
 <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
   <div *ngIf="name.errors.required">
-    Song name is required.
+    Movie name is required.
   </div>
   <div *ngIf="name.errors.minlength">
-    Song name must be at least 4 characters long.
+    Movie name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors.forbiddenName">
+    Movie name can't be 'furious'.
   </div>
 </div>
 
