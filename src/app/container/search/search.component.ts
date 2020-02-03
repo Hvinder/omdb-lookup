@@ -31,13 +31,12 @@ export class SearchComponent implements OnInit {
     this.searchService.getTrack(this.name.value).subscribe((response) => {
       console.log(response);
       this.data = response.Search;
-      for (let i = 0; i < this.data.length; i++) {
-        // let apiResponse=new ApiResponse();
+      for (const d of this.data) {
         const apiResponse: ApiResponse = { title: '', year: '', type: '', poster: '' };
-        apiResponse.title = this.data[i].Title;
-        apiResponse.year = this.data[i].Year;
-        apiResponse.type = this.data[i].Type;
-        apiResponse.poster = this.data[i].Poster;
+        apiResponse.title = d.Title;
+        apiResponse.year = d.Year;
+        apiResponse.type = d.Type;
+        apiResponse.poster = d.Poster;
         this.dataFromApi.push(apiResponse);
       }
     });
