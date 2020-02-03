@@ -1,6 +1,6 @@
-<div class="row text-center">
-	<div class="col-md-4 col-sm-12" *ngFor="let d of dataFromApi">
-		<p class="">
+<div class="row">
+	<div class="col-md-4 col-sm-12" *ngFor="let d of dataFromApi" style="border-bottom: 2px solid black;">
+		<p style="margin-top: 50px;">
 			<b>Name: </b>{{ d.title }}
 		</p>
 		<p>
@@ -9,8 +9,8 @@
 		<p>
 			<b>Type: </b>{{ d.type }}
 		</p>
-		<p>
-			<img src="{{d.poster}}" alt="">
+		<p style="margin-bottom: 50px;">
+			<img src="{{d.poster}}" alt="" style="width: 200px; height: 300px;">
 		</p>
 
 	</div>
