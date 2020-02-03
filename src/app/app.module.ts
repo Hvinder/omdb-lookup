@@ -8,10 +8,9 @@ import { reducers, metaReducers } from './reducers';
 import { HeaderComponent } from './header/header.component';
 import { ContainerComponent } from './container/container.component';
 import { SearchComponent } from './container/search/search.component';
-import { ResultComponent } from './container/result/result.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { TokenInterceptor } from './token.interceptor'; // For spotify
+// import { TokenInterceptor } from './token.interceptor'; // For spotify
 import { HTTP_INTERCEPTORS } from '@angular/common/http'; // For spotify
 
 
@@ -21,7 +20,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http'; // For spotify
     HeaderComponent,
     ContainerComponent,
     SearchComponent,
-    ResultComponent
   ],
   imports: [
     BrowserModule,

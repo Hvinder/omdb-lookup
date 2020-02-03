@@ -1,27 +1,27 @@
-// For spotify
+// // For spotify
 
-import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
-} from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+// import { Injectable } from '@angular/core';
+// import {
+//   HttpRequest,
+//   HttpHandler,
+//   HttpEvent,
+//   HttpInterceptor
+// } from '@angular/common/http';
+// import { Observable } from 'rxjs/Observable';
 
-@Injectable()
-export class TokenInterceptor implements HttpInterceptor {
+// @Injectable()
+// export class TokenInterceptor implements HttpInterceptor {
 
-  constructor() {}
+//   constructor() {}
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    
-    request = request.clone({
-      setHeaders: {
-        Authorization: `Bearer ${'BQDraMtc1vqrlCcLWcdPaS_snSDaYwctI2w4ut5IM5lk4Vlmwc5eYN01UG3zXcAYG8mBMLuYUWTlY1F5YYzOdbeaNbMtfFltVLOeEnl72XayyOdYz0dIP1dZcCV3UcwqkXGJ84yZd5aDm_uvse2WiCSvWe2g67U'}`
-      }
-    });
+//   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    return next.handle(request);
-  }
-}
+//     request = request.clone({
+//       setHeaders: {
+//         Authorization: `Bearer ${'BQDraMtc1vqrlCcLWcdPaS_snSDaYwctI2w4ut5IM5lk4Vlmwc5eYN01UG3zXcAYG8mBMLuYUWTlY1F5YYzOdbeaNbMtfFltVLOeEnl72XayyOdYz0dIP1dZcCV3UcwqkXGJ84yZd5aDm_uvse2WiCSvWe2g67U'}`
+//       }
+//     });
+
+//     return next.handle(request);
+//   }
+// }
