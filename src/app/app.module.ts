@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 // import { TokenInterceptor } from './token.interceptor'; // For spotify
 import { HTTP_INTERCEPTORS } from '@angular/common/http'; // For spotify
+import { ResultComponent } from './container/search/result/result.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http'; // For spotify
     HeaderComponent,
     ContainerComponent,
     SearchComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
