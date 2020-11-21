@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Search } from '../../../types/api-response.type';
 
 @Component({
   selector: 'app-result',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  @Input() dataFromApi: any = [];
+  @Input() searchResult: Search = null;
 
   constructor() { }
 

@@ -1,19 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
 import { HeaderComponent } from './header/header.component';
 import { ContainerComponent } from './container/container.component';
 import { SearchComponent } from './container/search/search.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-// import { TokenInterceptor } from './token.interceptor'; // For spotify
-import { HTTP_INTERCEPTORS } from '@angular/common/http'; // For spotify
 import { ResultComponent } from './container/search/result/result.component';
-
 
 @NgModule({
   declarations: [
@@ -21,29 +16,15 @@ import { ResultComponent } from './container/search/result/result.component';
     HeaderComponent,
     ContainerComponent,
     SearchComponent,
-    ResultComponent
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
-    })
   ],
-  providers: [
-  // For spotify
-  // {
-  //     provide: HTTP_INTERCEPTORS,
-  //     useClass: TokenInterceptor,
-  //     multi: true
-  //   }
-    ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

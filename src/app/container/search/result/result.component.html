@@ -1,19 +1,12 @@
-<div class="row text-center">
-	<div class="col-md-4 col-sm-12" *ngFor="let d of dataFromApi" style="border-bottom: 2px solid black;">
-		<div style="height: 150px;">
-		<p style="margin-top: 50px;">
-			<b>Name: </b>{{ d.title }}
-		</p>
-		<p>
-			<b>Year of release: </b>{{ d.year }}
-		</p>
-		<p>
-			<b>Type: </b>{{ d.type }}
-		</p>
-	</div>
-		<p style="margin-bottom: 50px;">
-			<img src="{{d.poster}}" alt="" style="width: 200px; height: 300px;">
-		</p>
-
-	</div>
+<div class="result-card">
+  <div><b>{{ searchResult.Title }}</b></div>
+  <img
+    src="{{ searchResult.Poster }}"
+    alt=""
+    style="width: 200px; height: 300px; margin: 10px 0 10px 0;"
+  />
+  <div class="row">
+	<div class="col-6"><b>Year of release: </b><br/>{{ searchResult.Year }}</div>
+	<div class="col-6"><b>Type: </b><br/>{{ searchResult.Type }}</div>
+  </div>
 </div>

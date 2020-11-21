@@ -1,37 +1,28 @@
 <div class="row d-flex justify-content-center m-4">
-    <input type="text" placeholder="Search" id="name" [formControl]="name">
-    <button class="btn btn-outline-success btn-rounded m-1" type="button" (click)="searchSong()">Search</button>
+  <input type="text" placeholder="Search" id="name" [formControl]="name" />
+  <button
+    class="btn btn-outline-success btn-rounded m-1"
+    type="button"
+    (click)="searchResult(name.value)"
+  >
+    Search
+  </button>
 </div>
-<div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-  <div *ngIf="name.errors.required">
-    Movie name is required.
-  </div>
+<div
+  *ngIf="name.invalid && (name.dirty || name.touched)"
+  class="alert alert-danger"
+>
+  <div *ngIf="name.errors.required">Movie name is required.</div>
   <div *ngIf="name.errors.minlength">
     Movie name must be at least 4 characters long.
   </div>
-  <div *ngIf="name.errors.forbiddenName">
-    Movie name can't be 'furious'.
-  </div>
 </div>
 
-<app-result [dataFromApi]="dataFromApi"></app-result>
-
-<!-- <div class="row text-center">
-	<div class="col-md-4 col-sm-12" *ngFor="let d of dataFromApi; let i = index">
-		<p class="">
-			<b>Name: </b>{{ d.title }}
-		</p>
-		<p>
-			<b>Year of release: </b>{{ d.year }}
-		</p>
-		<p>
-			<b>Type: </b>{{ d.type }}
-		</p>
-		<p>
-			<img src="{{d.poster}}" alt="">
-		</p>
-
-	</div>
-</div> -->
-
-<!-- {{ name.value }} -->
+<div class="row text-center">
+  <div
+    class="col-md-4 col-sm-12"
+    *ngFor="let searchResult of searchResults"
+  >
+    <app-result [searchResult]="searchResult"></app-result>
+  </div>
+</div>
