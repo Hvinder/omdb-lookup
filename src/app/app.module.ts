@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ContainerComponent } from './container/container.component';
 import { SearchComponent } from './container/search/search.component';
-import { ResultComponent } from './container/search/result/result.component';
+import { ResultComponent } from './container/result/result.component';
+import { ResultCardComponent } from './container/result/result-card/result-card.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ResultComponent } from './container/search/result/result.component';
     ContainerComponent,
     SearchComponent,
     ResultComponent,
+    ResultCardComponent,
   ],
   imports: [
     BrowserModule,

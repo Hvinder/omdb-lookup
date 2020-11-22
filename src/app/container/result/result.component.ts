@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Search } from '../../../types/api-response.type';
+import { Component, Input, OnInit } from '@angular/core';
+import { Search } from '../../types/api-response.type';
 
 @Component({
   selector: 'app-result',
@@ -7,7 +7,7 @@ import { Search } from '../../../types/api-response.type';
   styleUrls: ['./result.component.css'],
 })
 export class ResultComponent implements OnInit {
-  @Input() searchResult: Search = null;
+  @Input() searchResults: Search[];
 
   constructor() {}
 

@@ -1,0 +1,16 @@
+<div class="result-card">
+  <div>
+    <b>{{ searchResult.Title }}</b>
+  </div>
+  <img
+    src="{{ searchResult.Poster }}"
+    alt=""
+    style="width: 200px; height: 300px; margin: 10px 0 10px 0"
+  />
+  <div class="row">
+    <div class="col-6">
+      <b>Year of release: </b><br />{{ searchResult.Year }}
+    </div>
+    <div class="col-6"><b>Type: </b><br />{{ searchResult.Type }}</div>
+  </div>
+</div>
